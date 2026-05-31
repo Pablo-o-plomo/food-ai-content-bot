@@ -22,6 +22,7 @@
 .
 ├── bot.py            # основной код Telegram-бота
 ├── requirements.txt  # зависимости Python
+├── runtime.txt       # версия Python для Railway
 ├── Procfile          # worker-процесс для Railway/Heroku-style платформ
 ├── railway.json      # Start Command для Railway
 ├── .env.example      # пример локальных env-переменных
@@ -73,7 +74,7 @@ python bot.py
 ## Деплой на Railway
 
 1. Создайте новый проект Railway из GitHub-репозитория.
-2. Убедитесь, что Railway видит Python-проект и `requirements.txt`.
+2. Убедитесь, что Railway видит Python-проект, `requirements.txt` и `runtime.txt` с Python 3.11.9.
 3. В Variables добавьте:
    - `BOT_TOKEN`
    - `OPENAI_API_KEY`
