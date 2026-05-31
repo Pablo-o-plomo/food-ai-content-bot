@@ -22,7 +22,8 @@
 .
 ├── bot.py            # основной код Telegram-бота
 ├── requirements.txt  # зависимости Python
-├── runtime.txt       # версия Python для Railway
+├── runtime.txt       # версия Python 3.11 для Railway/Nixpacks
+├── .python-version   # дублирующая подсказка версии Python для сборщика
 ├── Procfile          # worker-процесс для Railway/Heroku-style платформ
 ├── railway.json      # Start Command для Railway
 ├── .env.example      # пример локальных env-переменных
@@ -74,7 +75,7 @@ python bot.py
 ## Деплой на Railway
 
 1. Создайте новый проект Railway из GitHub-репозитория.
-2. Убедитесь, что Railway видит Python-проект, `requirements.txt` и `runtime.txt` с Python 3.11.9.
+2. Убедитесь, что Railway видит Python-проект, `requirements.txt`, `runtime.txt` и `.python-version` с Python 3.11. Используется `3.11`, а не `python-3.11.9`, потому что Railway/mise может не найти подтвержденный artifact для конкретного patch-релиза.
 3. В Variables добавьте:
    - `BOT_TOKEN`
    - `OPENAI_API_KEY`
